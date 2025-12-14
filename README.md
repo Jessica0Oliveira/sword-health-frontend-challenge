@@ -1,73 +1,79 @@
-# React + TypeScript + Vite
+# Frontend Challenge – Sword Health
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + TypeScript project created from scratch using Vite, following the **Atomic Design** methodology.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 What Was Implemented
 
-## React Compiler
+✅ **React 19** with TypeScript  
+✅ **Vite** – Modern and fast build tool  
+✅ **ESLint** – Configured linting rules  
+✅ **Prettier** – Automatic code formatting  
+✅ **Vitest** – Testing framework  
+✅ **Atomic Design** – Well-structured component architecture  
+✅ **Base components**: Header, Footer, Layout, Button
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧬 Project Structure (Atomic Design)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```
+src/
+├── components/
+│   ├── atoms/              Basic components
+│   │   └── Button/         (Reusable button)
+│   ├── organisms/          🦠 Complex sections
+│   │   ├── Header/         (Application header)
+│   │   └── Footer/         (Application footer)
+│   └── templates/          📄 Page-level layouts
+│       └── MainLayout/     (Main application layout)
+├── pages/                  📱 Application pages
+│   └── HomePage/
+├── styles/                 🎨 Global styles
+├── tests/                  🧪 Tests
+└── App.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### What is Atomic Design?
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+Atomic Design is a methodology for building design systems by breaking UI components into smaller, reusable parts::
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+- **Atoms**: Basic UI components (e.g. Button)
+- **Organisms**: More complex UI sections (e.g. Header, Footer)
+- **Templates**: Page-level layouts (e.g. MainLayout)
+- **Pages**: Fully composed screens (e.g. HomePage)
+
+**Benefits**: Improved reusability, scalability, and maintainability.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Install dependencies
+
+```bash
+npm install
 ```
+
+### 2. Start the development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 📜 Available scripts
+
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build locally
+npm run lint         # Run ESLint checks
+npm run lint:fix     # Automatically fix lint issues
+npm run format       # Format code with Prettier
+npm run test         # Run tests
+```
+
+---
