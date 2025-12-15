@@ -1,12 +1,12 @@
-import './Footer.css';
+import styles from './Footer.module.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer">
+    <footer className={styles.footer}>
       <div className="container">
-        <p className="footer-text">© {currentYear} React Project. All rights reserved.</p>
+        <p className={styles.footerText}>© {currentYear} React Project. All rights reserved.</p>
       </div>
     </footer>
   );

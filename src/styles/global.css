@@ -8,8 +8,8 @@
 /* CSS variables */
 :root {
   /* Colors */
-  --color-primary: #2563eb;
-  --color-text: #1f2937;
+  --color-primary: #5591e6;
+  --color-text: #1e1e28;
   --color-bg: #ffffff;
   --color-border: #e5e7eb;
 
@@ -18,15 +18,23 @@
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
 
   /* Others */
-  --border-radius: 0.5rem;
+  --border-radius: 0.75rem;
   --max-width: 1200px;
 }
 
 /* Base styles */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family:
+    'Inter',
     system-ui,
     -apple-system,
     sans-serif;

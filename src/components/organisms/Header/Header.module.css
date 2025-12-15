@@ -7,36 +7,36 @@
   z-index: 100;
 }
 
-.header-content {
+.headerContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header-logo {
+.logo {
   font-size: 1.5rem;
   color: var(--color-primary);
 }
 
-.header-nav {
+.nav {
   display: flex;
   gap: var(--spacing-md);
 }
 
-.nav-link {
+.navLink {
   color: var(--color-text);
   text-decoration: none;
   padding: var(--spacing-sm);
   transition: color 0.2s;
 }
 
-.nav-link:hover {
+.navLink:hover {
   color: var(--color-primary);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .header-content {
+  .headerContent {
     flex-direction: column;
     gap: var(--spacing-md);
   }

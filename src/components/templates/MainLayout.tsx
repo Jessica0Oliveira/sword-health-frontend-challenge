@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import Header from '../organisms/Header/Header';
 import Footer from '../organisms/Footer/Footer';
-import './MainLayout.css';
+import styles from './MainLayout.module.css';
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -12,9 +12,9 @@ interface MainLayoutProps {
  */
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <div className="layout">
+    <div className={styles.layout}>
       <Header />
-      <main className="layout__content">{children}</main>
+      <main className={styles.layoutContent}>{children}</main>
       <Footer />
     </div>
   );
