@@ -2,6 +2,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Button from '../components/atoms/Button/Button';
+import styles from '../components/atoms/Button/Button.module.css';
 
 describe('Button', () => {
   it('renders the text correctly', () => {
@@ -12,13 +13,13 @@ describe('Button', () => {
   it('applies the primary variant by default', () => {
     render(<Button>Button</Button>);
     const button = screen.getByRole('button');
-    expect(button).toHaveClass('button--primary');
+    expect(button).toHaveClass(styles.primary);
   });
 
   it('applies the secondary variant when specified', () => {
     render(<Button variant="secondary">Button</Button>);
     const button = screen.getByRole('button');
-    expect(button).toHaveClass('button--secondary');
+    expect(button).toHaveClass(styles.secondary);
   });
 
   it('calls onClick when clicked', async () => {

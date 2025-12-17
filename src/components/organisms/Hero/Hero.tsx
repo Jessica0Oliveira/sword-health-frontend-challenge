@@ -21,7 +21,7 @@ const Hero = () => {
     <section className={styles.hero} aria-label="Hero section">
       <div className={styles.heroContent}>
         {/* Hero Left Section */}
-        <div className="container">
+        <div className={styles.heroLeftSide}>
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>
               WHAT MAKES
@@ -47,11 +47,14 @@ const Hero = () => {
         {/* Hero Right Section */}
         <div className={styles.heroImage}>
           <div className={styles.imageWrapper}>
+            {/* Preloaded in index.html for LCP optimization */}
             <img
               src="/hero-image.jpg"
               alt="Mother and child embracing, representing loved ones and family motivation"
               className={styles.image}
+              fetchPriority="high"
             />
+            {/* Decorative overlay - hidden from screen readers */}
             <div className={styles.rotatingOverlay} aria-hidden="true">
               <RotatingText words={rotatingTextWords} interval={3000} />
             </div>

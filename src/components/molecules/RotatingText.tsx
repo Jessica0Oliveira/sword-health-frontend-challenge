@@ -3,7 +3,7 @@ import styles from './RotatingText.module.css';
 
 interface RotatingTextProps {
   words: string[];
-  interval: number;
+  interval?: number;
 }
 
 const RotatingText = ({ words, interval = 3000 }: RotatingTextProps) => {

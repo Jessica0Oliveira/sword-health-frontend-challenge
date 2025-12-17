@@ -3,10 +3,10 @@ import { expect, afterEach } from 'vitest';
 import { cleanup } from '@testing-library/react';
 import * as matchers from '@testing-library/jest-dom/matchers';
 
-// Adiciona matchers do jest-dom ao vitest
+// Add jest-dom matchers to vitest
 expect.extend(matchers);
 
-// Limpa após cada teste
+// Clean up after each test
 afterEach(() => {
   cleanup();
 });
